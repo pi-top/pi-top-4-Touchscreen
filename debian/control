@@ -1,0 +1,14 @@
+Source: pt-touchscreen
+Section: utils
+Priority: optional
+Maintainer: pi-top <deb-maintainers@pi-top.com>
+Build-Depends: debhelper (>= 7)
+Standards-Version: 3.8.4
+Homepage: https://pi-top.com/
+
+Package: pt-touchscreen
+Architecture: armhf
+Depends: pt-twofing
+Description: pi-top Touchscreen Support
+ APT package for configuring anything relating to
+ touchscreen support on pi-topOS.
