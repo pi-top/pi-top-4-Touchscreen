@@ -8,7 +8,7 @@ Homepage: https://pi-top.com/
 
 Package: pt-touchscreen
 Architecture: armhf
-Depends: pt-twofing
+Depends: touchegg
 Description: pi-top Touchscreen Support
  APT package for configuring anything relating to
  touchscreen support on pi-topOS.
