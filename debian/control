@@ -2,14 +2,29 @@ Source: pt-touchscreen
 Section: utils
 Priority: optional
 Maintainer: pi-top <deb-maintainers@pi-top.com>
-Build-Depends: debhelper (>= 10)
-Standards-Version: 3.9.8
+Build-Depends: debhelper-compat (= 12)
+Standards-Version: 4.5.0
 Homepage: https://pi-top.com/
 
 Package: pt-touchscreen
 Architecture: armhf
 Depends: ${misc:Depends},
- touchegg
+# 'cut', 'tail' commands
+ coreutils,
+# 'grep' command
+ grep (>= 3.3-1),
+# Used when waiting for breadcrumb from udev rule
+ inotify-tools,
+# Possibly used for notifications
+ libnotify-bin,
+# Gesture support
+ touchegg,
+# Used for 'xset' and 'xrandr' commands
+ x11-xserver-utils,
+# pt-ui-mods provides a notification-wrapped call to touchegg
+Suggests: pt-ui-mods,
+# Notifications that can be interacted with
+ pt-notifications
 Description: pi-top Touchscreen Support
  Dependency package for configuring anything relating to
  touchscreen support on pi-topOS.
