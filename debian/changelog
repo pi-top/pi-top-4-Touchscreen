@@ -1,3 +1,9 @@
+pt-touchscreen (2.0.0) buster; urgency=medium
+
+  * Migrated touchscreen hotplug support from pt-os-mods
+
+ -- Mike Roberts <mike@pi-top.com>  Thu, 15 Oct 2020 16:27:31 +0100
+
 pt-touchscreen (1.1.0-1) buster; urgency=medium
 
   * Update dependency: touchegg

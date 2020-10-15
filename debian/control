@@ -10,7 +10,7 @@ Package: pt-touchscreen
 Architecture: armhf
 Depends: ${misc:Depends},
 # 'cut', 'tail' commands
- coreutils,
+ coreutils (>= 8.30-3),
 # 'grep' command
  grep (>= 3.3-1),
 # Used when waiting for breadcrumb from udev rule
