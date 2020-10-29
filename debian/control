@@ -25,6 +25,10 @@ Depends: ${misc:Depends},
 Suggests: pt-ui-mods,
 # Notifications that can be interacted with
  pt-notifications
+# Avoid errors since touchscreen udev rule was provided by
+# pt-os-mods in versions < 8.0
+Replaces: pt-os-mods (<< 8)
+Breaks: pt-os-mods (<< 8)
 Description: pi-top Touchscreen Support
  Dependency package for configuring anything relating to
  touchscreen support on pi-topOS.
