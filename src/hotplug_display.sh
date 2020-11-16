@@ -41,12 +41,12 @@ get_touchegg_start_command() {
 
 get_all_displays() {
 	displays=$(ls "/tmp/.X11-unix/")
-	echo $displays
+	echo "${displays}"
 }
 
 get_first_display() {
 	first_display=$(get_all_displays | cut -d" " -f1 | sed "s/X//")
-	echo $first_display
+	echo "${first_display}"
 }
 
 get_user_using_display() {
@@ -132,7 +132,7 @@ handle_gesture_support() {
 
 update_resolution() {
 	local display="${1}"
-	env DISPLAY=:$(get_first_display) xrandr --output "${display}" --mode 1920x1080
+	env DISPLAY=:"$(get_first_display)" xrandr --output "${display}" --mode 1920x1080
 }
 
 unblank_display() {
@@ -150,7 +150,7 @@ handle_display_state() {
 
 	# Update display state - may not be connected!
 	for disp in "${displays[@]}"; do
-		if env DISPLAY=:$(get_first_display) xrandr --query | grep -q "${disp} connected"; then
+		if env DISPLAY=:"$(get_first_display)" xrandr --query | grep -q "${disp} connected"; then
 			update_resolution "${disp}"
 			unblank_display
 			break
