@@ -136,7 +136,7 @@ update_resolution() {
 }
 
 unblank_display() {
-	xset dpms force on
+	env DISPLAY=:"$(get_first_display)" xset dpms force on
 }
 
 handle_display_state() {
