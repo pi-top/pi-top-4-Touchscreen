@@ -1,6 +1,6 @@
 SUBSYSTEM=="usb"                                          \
 , ACTION=="add"                                           \
-, ATTR{idVendor}=="222a"                                  \
-, ATTR{idProduct}=="0001"                                 \
+, ATTR{product}=="FT5926 MultiTouch"                      \
+, ATTR{manufacturer}=="Focaltech Systems"                 \
 , ENV{DISPLAY}=":0"                                       \
 , RUN="/usr/bin/touch /tmp/pt-hotplug-display.breadcrumb"
