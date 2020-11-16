@@ -39,10 +39,19 @@ get_touchegg_start_command() {
 	fi
 }
 
+get_all_displays() {
+	displays=$(ls "/tmp/.X11-unix/")
+	echo $displays
+}
+
+get_first_display() {
+	first_display=$(get_all_displays | cut -d" " -f1 | sed "s/X//")
+	echo $first_display
+}
+
 get_user_using_display() {
-	# TODO: rename pt-display; move to low-level tools package
-	# TODO: add `-u` flag to get user only and avoid grepping
-	pt-display | grep "User currently using display" | cut -d$'\t' -f2
+	first_display=$(get_first_display)
+	who | grep "(:${first_display})" | awk '{print $1}'
 }
 
 run_systemd_command_as_user() {
