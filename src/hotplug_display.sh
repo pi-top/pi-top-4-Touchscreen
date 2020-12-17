@@ -39,10 +39,19 @@ get_touchegg_start_command() {
 	fi
 }
 
+get_all_displays() {
+	displays=$(ls "/tmp/.X11-unix/")
+	echo "${displays}"
+}
+
+get_first_display() {
+	first_display=$(get_all_displays | cut -d" " -f1 | sed "s/X//")
+	echo "${first_display}"
+}
+
 get_user_using_display() {
-	# TODO: rename pt-display; move to low-level tools package
-	# TODO: add `-u` flag to get user only and avoid grepping
-	pt-display | grep "User currently using display" | cut -d$'\t' -f2
+	first_display=$(get_first_display)
+	who | grep "(:${first_display})" | awk '{print $1}'
 }
 
 run_systemd_command_as_user() {
@@ -123,11 +132,11 @@ handle_gesture_support() {
 
 update_resolution() {
 	local display="${1}"
-	xrandr --output "${display}" --mode 1920x1080
+	env DISPLAY=:"$(get_first_display)" xrandr --output "${display}" --mode 1920x1080
 }
 
 unblank_display() {
-	xset dpms force on
+	env DISPLAY=:"$(get_first_display)" xset dpms force on
 }
 
 handle_display_state() {
@@ -141,7 +150,7 @@ handle_display_state() {
 
 	# Update display state - may not be connected!
 	for disp in "${displays[@]}"; do
-		if xrandr --query | grep -q "${disp} connected"; then
+		if env DISPLAY=:"$(get_first_display)" xrandr --query | grep -q "${disp} connected"; then
 			update_resolution "${disp}"
 			unblank_display
 			break

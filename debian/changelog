@@ -1,3 +1,9 @@
+pt-touchscreen (2.0.2) buster; urgency=medium
+
+  * Set DISPLAY variable when using screen commands
+
+ -- Jorge Capona <jorge@pi-top.com>  Mon, 16 Nov 2020 19:47:38 -0300
+
 pt-touchscreen (2.0.1) buster; urgency=medium
 
   * Fix install due to missing package relationships
