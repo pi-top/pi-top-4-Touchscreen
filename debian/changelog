@@ -1,6 +1,5 @@
 pt-touchscreen (2.0.2) buster; urgency=medium
 
-  * Use device product & manufacturer to trigger udev rule
   * Set DISPLAY variable when using screen commands
 
  -- Jorge Capona <jorge@pi-top.com>  Mon, 16 Nov 2020 19:47:38 -0300
