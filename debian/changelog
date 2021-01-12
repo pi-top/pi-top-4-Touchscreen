@@ -1,3 +1,9 @@
+pt-touchscreen (2.1.0) buster; urgency=medium
+
+  * Remove gesture handling from screen hotplug script
+
+ -- Jorge Capona <jorge@pi-top.com>  Tue, 12 Jan 2021 15:50:18 -0300
+
 pt-touchscreen (2.0.2) buster; urgency=medium
 
   * Set DISPLAY variable when using screen commands
