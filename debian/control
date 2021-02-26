@@ -7,7 +7,7 @@ Standards-Version: 4.5.0
 Homepage: https://pi-top.com/
 
 Package: pt-touchscreen
-Architecture: any
+Architecture: all
 Depends: ${misc:Depends},
 # 'cut', 'tail' commands
  coreutils (>= 8.30-3),
