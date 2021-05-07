@@ -1,3 +1,13 @@
+pt-touchscreen (2.1.1) buster; urgency=medium
+
+  [ Mike Roberts ]
+  * Allow external sources when testing shell scripts
+  * Architecture: any --> all
+  * Add GitHub workflows
+  * Standards-Version: 4.5.1
+
+ -- pi-top <deb-maintainers@pi-top.com>  Fri, 07 May 2021 17:06:24 +0000
+
 pt-touchscreen (2.1.0) buster; urgency=medium
 
   * Remove gesture handling from screen hotplug script
