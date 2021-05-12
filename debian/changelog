@@ -1,10 +1,7 @@
 pt-touchscreen (2.1.1) buster; urgency=medium
 
-  [ Mike Roberts ]
   * Allow external sources when testing shell scripts
-  * Architecture: any --> all
-  * Add GitHub workflows
-  * Standards-Version: 4.5.1
+  * Update packaging
 
  -- pi-top <deb-maintainers@pi-top.com>  Fri, 07 May 2021 17:06:24 +0000
 
