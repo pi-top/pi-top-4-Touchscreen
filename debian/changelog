@@ -1,3 +1,10 @@
+pt-touchscreen (2.1.1) buster; urgency=medium
+
+  * Allow external sources when testing shell scripts
+  * Update packaging
+
+ -- pi-top <deb-maintainers@pi-top.com>  Fri, 07 May 2021 17:06:24 +0000
+
 pt-touchscreen (2.1.0) buster; urgency=medium
 
   * Remove gesture handling from screen hotplug script
