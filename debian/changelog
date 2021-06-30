@@ -1,3 +1,10 @@
+pt-touchscreen (4.2.1) buster; urgency=medium
+
+  [ Mike Roberts ]
+  * Bump version to be ahead of when this was packaged via pt-os-core
+
+ -- pi-top <deb-maintainers@pi-top.com>  Wed, 30 Jun 2021 13:48:45 +0000
+
 pt-touchscreen (4.2.0) buster; urgency=medium
 
   * Migrate away from pt-os-core as source package
