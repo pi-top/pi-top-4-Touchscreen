@@ -1,3 +1,10 @@
+pt-touchscreen (4.2.0) buster; urgency=medium
+
+  * Migrate away from pt-os-core as source package
+  * Bump version to be ahead of pt-os-core release version
+
+ -- pi-top <deb-maintainers@pi-top.com>  Wed, 30 Jun 2021 14:18:37 +0100
+
 pt-touchscreen (2.1.1) buster; urgency=medium
 
   * Allow external sources when testing shell scripts
