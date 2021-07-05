@@ -1,3 +1,10 @@
+pt-touchscreen (4.2.2) buster; urgency=medium
+
+  [ Mike Roberts ]
+  * Workflow: create draft release manually
+
+ -- pi-top <deb-maintainers@pi-top.com>  Mon, 05 Jul 2021 10:03:37 +0000
+
 pt-touchscreen (4.2.1) buster; urgency=medium
 
   * Bump version to be ahead of when this was packaged via pt-os-core
