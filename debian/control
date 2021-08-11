@@ -21,7 +21,7 @@ Depends:
 # pt-ui-mods provides a notification-wrapped call to touchegg
 Suggests: pt-ui-mods,
 # Notifications that can be interacted with
- pt-notifications
+ pt-os-notifications
 # Touchscreen udev rule was provided by pt-os-mods in versions < 8.0
 Description: pi-top Touchscreen Support
  Dependency package for configuring anything relating to
