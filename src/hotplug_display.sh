@@ -7,7 +7,7 @@ set -euo pipefail
 IFS=$'\n\t'
 ###############################################################
 
-udev_breadcrumb="/tmp/pt-hotplug-display.breadcrumb"
+udev_breadcrumb="/tmp/.com.pi-top.pt-touchscreen.hotplug-display.is_connected"
 
 wait_for_file_to_exist() {
 	local path="${1}"

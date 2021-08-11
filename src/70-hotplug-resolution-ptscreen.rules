@@ -3,4 +3,4 @@ SUBSYSTEM=="usb"                                          \
 , ATTR{idVendor}=="222a"                                  \
 , ATTR{idProduct}=="0001"                                 \
 , ENV{DISPLAY}=":0"                                       \
-, RUN="/usr/bin/touch /tmp/pt-hotplug-display.breadcrumb"
+, RUN="/usr/bin/touch /tmp/.com.pi-top.pt-touchscreen.hotplug-display.is_connected"
