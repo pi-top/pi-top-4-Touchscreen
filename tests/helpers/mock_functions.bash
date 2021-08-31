@@ -1,54 +1,6 @@
 # shellcheck source=tests/helpers/global_variables.bash
 source "tests/helpers/global_variables.bash"
 
-is_pi_top_os() {
-	return 0
-}
-export -f is_pi_top_os
-
-chown() { return; }
-export -f chown
-
-get_home_directory_for_user() {
-	local user="${1}"
-	# Fail if not set
-	echo "${spoofed_home_dirs:?}" | grep "${user}"
-
-}
-export -f get_home_directory_for_user
-
-get_users() {
-	# Fail if not set
-	echo "${spoofed_users:?}"
-}
-export -f get_users
-
-pt-notify-send() {
-	[[ "${#}" == 5 ]] || (echo "pt-notify-send err: wrong # of args - ${#} != 5" && return 1)
-
-	[[ "${1}" == "--expire-time=0" ]] || (echo "pt-notify-send err: wrong arg: #1 - '${1}'" && return 1)
-
-	[[ "${2}" == "--icon=dialog-warning" ]] || (echo "pt-notify-send err: wrong arg: #2 - '${2}'" && return 1)
-
-	[[ "${3}" == "Sound configuration updated" ]] ||
-		[[ "${3}" == "Sound configuration needs to be updated" ]] || (echo "pt-notify-send err: wrong arg: #3 - '${3}'" && return 1)
-
-	[[ "${4}" == "Please restart to apply changes.
-You may experience sound issues until you do." ]] ||
-		[[ "${4}" == "Please restart to begin applying sound configuration changes.
-You may experience sound issues until you do." ]] || (echo "pt-notify-send err: wrong arg: #4 - '${4}'" && return 1)
-
-	[[ "${5}" == "--action=Restart:env SUDO_ASKPASS=/usr/lib/pt-os-mods/pwdptom.sh sudo -A /sbin/reboot" ]] || (echo "pt-notify-send err: wrong arg: #5 - '${5}'" && return 1)
-
-	echo "pt-notify-send: OK"
-}
-export -f pt-notify-send
-
-ischroot() {
-	# Nope
-	return 1
-}
-
 systemctl() {
 	# systemctl will return zero exit code if args are correct
 	if [[ "${#}" == 3 ]] &&
@@ -89,41 +41,6 @@ env() {
 		return 1
 	fi
 }
-
-raspi-config() {
-	[[ "${#}" == 5 ]] || return 1
-	[[ "${1}" == "nonint" ]] || return 1
-	[[ "${2}" == "set_config_var" ]] || return 1
-	[[ "${3}" == "dtparam=audio" ]] || return 1
-	[[ "${4}" == "on" ]] || return 1
-	[[ "${5}" == "/boot/config.txt" ]] || return 1
-	return 0
-}
-export -f raspi-config
-
-aplay() {
-	echo "**** List of PLAYBACK Hardware Devices ****
-card 0: b1 [bcm2835 HDMI 1], device 0: bcm2835 HDMI 1 [bcm2835 HDMI 1]
-  Subdevices: 4/4
-  Subdevice \#0: subdevice \#0
-  Subdevice \#1: subdevice \#1
-  Subdevice \#2: subdevice \#2
-  Subdevice \#3: subdevice \#3
-card 9: Headphones [bcm2835 Headphones], device 0: bcm2835 Headphones [bcm2835 Headphones]
-  Subdevices: 4/4
-  Subdevice \#0: subdevice \#0
-  Subdevice \#1: subdevice \#1
-  Subdevice \#2: subdevice \#2
-  Subdevice \#3: subdevice \#3
-"
-}
-export -f aplay
-
-pt-host() { echo "pi-top [4]"; }
-export -f pt-host
-
-uname() { echo "5.4.51-v7l+"; }
-export -f uname
 
 xset() {
 	[[ "${#}" == 3 ]] || return 1

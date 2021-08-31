@@ -18,11 +18,6 @@ Depends:
  touchegg,
 # Used for 'xset' and 'xrandr' commands
  x11-xserver-utils,
-# pt-ui-mods provides a notification-wrapped call to touchegg
-Suggests: pt-ui-mods,
-# Notifications that can be interacted with
- pt-os-notifications
-# Touchscreen udev rule was provided by pt-os-mods in versions < 8.0
 Description: pi-top Touchscreen Support
  Dependency package for configuring anything relating to
  touchscreen support on pi-topOS.
