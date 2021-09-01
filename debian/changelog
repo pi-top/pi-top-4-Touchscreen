@@ -1,3 +1,16 @@
+pt-touchscreen (4.2.2) buster; urgency=medium
+
+  * Workflow: create draft release manually
+  * New workflows (#8)
+  * Update master workflow files
+  * Update master workflow files
+  * Initial release: Bullseye (#11)
+  * Updated master workflow files
+  * Delete unused functions, etc
+  * Updated master workflow files
+
+ -- pi-top <deb-maintainers@pi-top.com>  Wed, 01 Sep 2021 20:47:06 +0000
+
 pt-touchscreen (4.2.1) buster; urgency=medium
 
   * Bump version to be ahead of when this was packaged via pt-os-core
