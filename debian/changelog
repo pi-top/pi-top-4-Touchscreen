@@ -1,13 +1,9 @@
 pt-touchscreen (4.2.2) bullseye; urgency=medium
 
-  * Workflow: create draft release manually
-  * New workflows (#8)
-  * Update master workflow files
   * Update master workflow files
   * Initial release: Bullseye (#11)
   * Updated master workflow files
   * Delete unused functions, etc
-  * Updated master workflow files
 
  -- pi-top <deb-maintainers@pi-top.com>  Wed, 01 Sep 2021 20:48:06 +0000
 
