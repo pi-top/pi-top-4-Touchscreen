@@ -1,4 +1,4 @@
-pt-touchscreen (4.2.2) buster; urgency=medium
+pt-touchscreen (4.2.2) bullseye; urgency=medium
 
   * Workflow: create draft release manually
   * New workflows (#8)
