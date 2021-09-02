@@ -4,7 +4,7 @@ Documentation=https://knowledgebase.pi-top.com/knowledge
 
 [Service]
 Type=simple
-ExecStart=/usr/lib/pt-os-mods/hotplug_display.sh
+ExecStart=/usr/lib/pt-touchscreen/hotplug_display.sh
 
 [Install]
 WantedBy=graphical.target

@@ -1,4 +1,4 @@
-pt-touchscreen (4.2.2) bullseye; urgency=medium
+pt-touchscreen (4.2.2-1) bullseye; urgency=medium
 
   * Update master workflow files
   * Initial release: Bullseye (#11)
