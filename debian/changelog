@@ -1,3 +1,11 @@
+pt-touchscreen (4.2.2-2) bullseye; urgency=medium
+
+  * Updated master workflow files
+  * Updated master workflow files
+  * Add README
+
+ -- pi-top <deb-maintainers@pi-top.com>  Mon, 01 Nov 2021 16:14:47 +0000
+
 pt-touchscreen (4.2.2-1) bullseye; urgency=medium
 
   * Update master workflow files
