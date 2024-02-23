@@ -1,17 +1,5 @@
 pt-touchscreen (4.2.2-4) bullseye; urgency=medium
 
-  * Updated master workflow files
-  * Add signing key and passphrase to deb_release workflow
-  * Add pull request template
-  * Update PR template to track Github issues
-  * Updated master workflow files
-  * Updated master workflow files
-  * Updated master workflow files
-  * Updated master workflow files
-  * Updated master workflow files
-  * Package for bookworm (#16)
-  * New changelog entry: v4.2.2-3 (#14)
-  * Update release workflow
   * Update release workflow
 
  -- pi-top <deb-maintainers@pi-top.com>  Fri, 23 Feb 2024 15:55:30 +0000
