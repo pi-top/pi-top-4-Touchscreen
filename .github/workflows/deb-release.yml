@@ -130,8 +130,8 @@ jobs:
           )
         with:
           repository: ${{ env.PACKAGECLOUD_REPO }}/${{ env.OS }}/${{ matrix.distro }}
-          directory: ./artifacts
-          files: "*.dsc"
+          files: |
+            ./artifacts/*.dsc
         env:
           PACKAGECLOUD_TOKEN: ${{ secrets.PACKAGECLOUD_TOKEN }}
 
