@@ -1,4 +1,4 @@
-pt-touchscreen (4.2.3-1) bookworm; urgency=medium
+pt-touchscreen (4.3.0-1) bookworm; urgency=medium
 
   * Allow running the changelog bump by hand
 
